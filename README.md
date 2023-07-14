@@ -1,1 +1,1 @@
-# first-project-javascript
+This site shows three functions using JavaScript
