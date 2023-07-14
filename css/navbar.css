@@ -1,0 +1,42 @@
+#navbar {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    background-color: var(--secondary-font-color);
+    color: var(--primary-font-color);
+}
+
+#navbar .content-area {
+    padding: 0px 36px;
+}
+
+#navbar .flexbox {
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+}
+
+#navbar .logo {
+    display: flex;
+    flex-shrink: 0;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#navbar .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+#navbar .menu li {
+    margin-left: 20px;
+}
+
+#navbar a {
+    text-decoration: none; /* removes underlines */
+    font-size: 1.25rem;
+    font-weight: normal;
+}

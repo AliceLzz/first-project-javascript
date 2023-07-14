@@ -1,0 +1,51 @@
+.section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.section .flexbox .left-column,
+.section .flexbox .right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.0;
+}
+
+.section p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.12rem;
+    font-weight: normal;
+    color: var(--primary-font-color);
+}
+
+.section button, .section button:hover {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.section img {
+    max-width: 420px;
+    align-self: center;
+}
+
+@media(max-width: 768px) {
+    .section .flexbox {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .section h1, .section p, .section button {
+        align-self: center;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .section img {
+        max-width: 336px;
+    }
+}
