@@ -1,28 +1,90 @@
-
-#timer-count {
+  
+  .timer-container {
     text-align: center;
-    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
- 
-  #timer-count h1 {
-    font-size: 24px;
+  .timer-container h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
   }
   
-  #timer-display {
-    font-size: 36px;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #f2f2f2;
+  .time-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .time-input label {
+    color: #555;
+  }
+  
+  .time-input input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 5px;
   }
   
-  #alert-message {
-    font-size: 24px;
-    font-weight: bold;
-    color: red;
-    margin-top: 20px;
+  .timer {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Optional: Center the timer when it's 'Time's up!' */
+  .timer-container .times-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    font-size: 1.5rem;
+    color: #ff0000;
+  }
+  
+  /* Responsive Styles */
+  
+  @media screen and (max-width: 600px) {
+    .time-input {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-bottom: 20px;
+    }
+  
+    .time-input input {
+      width: 80px;
+    }
+  
+    .timer {
+      font-size: 1.5rem;
+    }
   }
   

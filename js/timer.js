@@ -1,21 +1,32 @@
-function countdownTimer(seconds) {
-    const interval = setInterval(() => {
-      seconds--;
-  
-      if (seconds <= 0) {
-        clearInterval(interval);
-        alert("Time's up!");
-      } else {
-        const hours = String(Math.floor(seconds / 3600)).padStart(2, "0");
-        const minutes = String(Math.floor((seconds % 3600) / 60)).padStart(2, "0");
-        const remainingSeconds = String(seconds % 60).padStart(2, "0");
-  
-        console.log(`${hours}:${minutes}:${remainingSeconds}`);
+function startCountdown() {
+    const hoursInput = document.getElementById('hours');
+    const minutesInput = document.getElementById('minutes');
+    const secondsInput = document.getElementById('seconds');
+    
+    let hours = parseInt(hoursInput.value) || 0;
+    let minutes = parseInt(minutesInput.value) || 0;
+    let seconds = parseInt(secondsInput.value) || 0;
+    
+    let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+    
+    const timerDisplay = document.getElementById('timer');
+    timerDisplay.innerHTML = formatTime(totalSeconds);
+    
+    const countdownInterval = setInterval(() => {
+      totalSeconds--;
+      timerDisplay.innerHTML = formatTime(totalSeconds);
+
+      if (totalSeconds <= 0) {
+        clearInterval(countdownInterval);
+        timerDisplay.innerHTML = 'Time\'s up!';
       }
     }, 1000);
   }
   
-
-  const countdownTimeInSeconds = 10 * 60;
-  countdownTimer(countdownTimeInSeconds);
-  
+  function formatTime(totalSeconds) {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    
+    return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
