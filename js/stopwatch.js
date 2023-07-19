@@ -7,7 +7,7 @@ let startTime = 0;
 let elapsedTime = 0;
 let currentTime = 0;
 let stop = true;
-let inervalId;
+let intervalId;
 let hrs = 0;
 let mins = 0;
 let secs = 0;
@@ -16,7 +16,7 @@ startBtn.addEventListener('click', () => {
     if (stop) {
         stop = false;
         startTime = Date.now() - elapsedTime;
-        inervalId = setInterval(updateTime, 75);
+        intervalId = setInterval(updateTime, 75);
     }
 });
 
@@ -24,13 +24,13 @@ stopBtn.addEventListener('click', () => {
     if(!stop) {
         stop = true;
         elapsedTime = Date.now() - startTime;
-        clearInterval(inervalId);
+        clearInterval(intervalId);
     }
 });
 
 resetBtn.addEventListener('click', () => {
     stop = true;
-    clearInterval(inervalId);
+    clearInterval(intervalId);
     startTime = 0;
     elapsedTime = 0;
     currentTime = 0;
