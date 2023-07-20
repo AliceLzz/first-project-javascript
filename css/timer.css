@@ -1,0 +1,106 @@
+
+#timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px;
+    border-radius: 10px;
+}
+
+
+#timer {
+    margin-top: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: cornflowerblue;
+}
+
+
+#timer-inputs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 6px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid dimgray;
+    margin-right: 8px;
+}
+
+
+#button-all {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+
+#timer-start-btn,
+#timer-stop-btn,
+#timer-reset-btn,
+#timer-resume-btn {
+    width: 120px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-right: 8px;
+    background-color: lightslategrey;
+}
+
+#timer-start-btn:hover,
+#timer-stop-btn:hover,
+#timer-reset-btn:hover,
+#timer-resume-btn:hover {
+    background-color: #4B5563;
+}
+
+
+@media screen and (max-width: 768px) {
+    #timer-container {
+        padding: 24px;
+    }
+
+    #timer {
+        font-size: 2rem;
+    }
+
+    label,
+    input[type="number"] {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+  
+    #timer-inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+   
+    #button-all {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #timer-start-btn,
+    #timer-stop-btn,
+    #timer-reset-btn,
+    #timer-resume-btn {
+        margin-right: 0;
+        margin-top: 8px;
+        width: 100%;
+    }
+}
