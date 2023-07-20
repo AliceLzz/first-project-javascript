@@ -15,13 +15,21 @@
         <link rel="stylesheet" href="css/stopwatch.css">
         <link rel="stylesheet" href="css/timer.css">
         <title>First Project JavaScript</title>
+
     </head>
     <body>
         <header id="nav-header">
             <nav id="navbar">
                 <div class="content-area">
                     <div class="flexbox parent">
-                        <div class="logo">LOGO</div>
+                        <div class="logo">
+                            <a href="index.html"
+                                ><img
+                                    class="logo-icon"
+                                    src="imgs/logo.svg"
+                                    alt="company logo"
+                            /></a>
+                        </div>
                         <ul class="menu">
                             <li><a href="#nav-header">Home</a></li>
                             <li><a href="#carousel">Calculator</a></li>
@@ -33,52 +41,44 @@
             </nav>
         </header>
 
-
-        <section id="carousel" class="section">
-        <div class="content-area">
-            <h1>Calculator</h1>       
-            <div class="container">
-
-                <div class="calculator">
-                    <input type="text" placeholder="0" id="inputBox">
+        <section id="calculator-container" class="section">
+            <h1>Calculator</h1>
+            <div id="calculator" class="content-area">
+                <div class="calculator-feature">
+                    <input type="text" placeholder="0" id="inputBox" />
                     <div>
-                        <button class="operator">AC</button>
-                        <button class="operator">DEL</button>
-                        <button class="operator">%</button>
-                        <button class="operator">/</button>
+                        <button class="calculatorBtn operator">AC</button>
+                        <button class="calculatorBtn operator">DEL</button>
+                        <button class="calculatorBtn operator">%</button>
+                        <button class="calculatorBtn operator">/</button>
                     </div>
                     <div>
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button class="operator">*</button>
+                        <button class="calculatorBtn">7</button>
+                        <button class="calculatorBtn">8</button>
+                        <button class="calculatorBtn">9</button>
+                        <button class="calculatorBtn operator">*</button>
                     </div>
                     <div>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button class="operator">-</button>
+                        <button class="calculatorBtn">4</button>
+                        <button class="calculatorBtn">5</button>
+                        <button class="calculatorBtn">6</button>
+                        <button class="calculatorBtn operator">-</button>
                     </div>
                     <div>
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button class="operator">+</button>
+                        <button class="calculatorBtn">1</button>
+                        <button class="calculatorBtn">2</button>
+                        <button class="calculatorBtn">3</button>
+                        <button class="calculatorBtn operator">+</button>
                     </div>
                     <div>
-                        <button>00</button>
-                        <button>0</button>
-                        <button>.</button>
-                        <button class="equalBtn">=</button>
+                        <button class="calculatorBtn">00</button>
+                        <button class="calculatorBtn">0</button>
+                        <button class="calculatorBtn">.</button>
+                        <button class="calculatorBtn equalBtn">=</button>
                     </div>
                 </div>
-
-            </div>
-
             </div>
         </section>
-
-        <div class="decoration spacer">&nbsp;</div>
 
         <section id="stopwatch-container" class="section">
             <h1>Stopwatch</h1>
@@ -111,7 +111,7 @@
             </div>
         </section>
         
-        
+
         <script src="./js/stopwatch.js"></script>
         <script src="./js/calculator.js"></script>
         <script src="./js/timer.js"></script>

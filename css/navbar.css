@@ -4,6 +4,9 @@
     min-height: 60px;
     background-color: var(--secondary-font-color);
     color: var(--primary-font-color);
+    position: fixed;
+    width: 100vw;
+    padding: 8px 0;
 }
 
 #navbar .content-area {
@@ -39,4 +42,9 @@
     text-decoration: none; /* removes underlines */
     font-size: 1.25rem;
     font-weight: normal;
+}
+
+#navbar .logo-icon {
+    width: 54px;
+    filter: invert(1);
 }

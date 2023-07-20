@@ -1,6 +1,7 @@
 .section {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    padding: 64px 0;
 }
 
 .section .flexbox .left-column,

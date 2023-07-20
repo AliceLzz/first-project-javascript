@@ -1,9 +1,9 @@
 let input = document.getElementById('inputBox');
-let buttons = document.querySelectorAll('button');
+let buttons = document.getElementsByClassName('calculatorBtn');
 
 let number = "";
-//let arr = Array.from(buttons);
-buttons.forEach(button => {
+let arr = Array.from(buttons);
+arr.forEach(button => {
     button.addEventListener('click', (e) =>{
         if(e.target.innerHTML == '='){
             number = eval(number);
