@@ -93,9 +93,10 @@
 
         <div class="decoration spacer">&nbsp;</div>
 
-
-        <div>
+        <section class="section" id="timer-count">
+        <div id="timer-container">
             <h1>Timer</h1>
+            <div id="timer"></div>
             <label for="hours">Hours:</label>
             <input type="number" id="hours" min="0">
             <label for="minutes">Minutes:</label>
@@ -104,7 +105,7 @@
             <input type="number" id="seconds" min="0">
             <button onclick="startCountdown()">Start</button>
           </div>
-          <div id="timer"></div>
+        </section>
         <script src="./js/stopwatch.js"></script>
         <script src="./js/calculator.js"></script>
         <script src="./js/timer.js"></script>
