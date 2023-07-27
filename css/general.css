@@ -2,11 +2,11 @@
 
 html {
     font-size: 16px;
-    --primary-color: #1F2937;
+    --primary-color: #212121;
     --secondary-color: #F9FAF8;
-    --accent-color: #3882F6;
+    --accent-color: #73eeb4;
     --primary-font-color: #FFF;
-    --secondary-font-color: #000;
+    --secondary-font-color: #08b464;
 }
 
 * {
